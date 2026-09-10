@@ -67,6 +67,7 @@ const handleedit=(note)=>{
 Seteditid(note.id)
 }
 const handledelete= (id)=>{
+  confirm("Are You Sure Want To Delete Your Note")
    const updatenotes=getNotes.filter((note)=> note.id !== id);
    SetGetNotes(updatenotes)
    localStorage.setItem("notes",JSON.stringify(updatenotes))
