@@ -1,0 +1,270 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;}
+
+.notes-app {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(
+    135deg,
+    #090f2a,
+    #342c3c,
+    #21623a
+  );
+
+  padding: 3rem 1rem 0;
+}
+
+.notes-wrapper {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: auto;
+  flex: 1;
+}
+
+
+/* Heading */
+
+.heading {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.heading h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.heading p {
+  opacity: 0.8;
+}
+
+
+/* Form */
+
+.note-form {
+  max-width: 650px;
+
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+
+  padding: 2rem;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 1rem;
+}
+
+.note-form input,
+.note-form textarea {
+  width: 100%;
+
+  padding: 1rem;
+
+  border: none;
+  outline: none;
+
+  border-radius: 0.6rem;
+
+  font-size: 1rem;
+}
+
+.note-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.note-form > button {
+  padding: 0.9rem;
+
+  border: none;
+  border-radius: 0.6rem;
+
+  background: #111827;
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.note-form > button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Notes Section */
+
+.notes-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.notes-section h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Notes Container */
+
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 1.5rem;
+}
+
+
+/* Card */
+
+.note-card {
+  flex: 1 1 300px;
+
+  padding: 1.5rem;
+
+  background: white;
+
+  border-radius: 1rem;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.note-card h3 {
+  color: #111827;
+}
+
+.note-card p {
+  color: #6b7280;
+  line-height: 1.6;
+
+  flex: 1;
+}
+
+
+/* Buttons */
+
+.card-buttons {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.card-buttons button {
+  padding: 0.6rem 1rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #667eea;
+  color: white;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+
+/* Footer */
+
+.footer {
+  width: 100%;
+
+  text-align: center;
+
+  padding: 1.2rem;
+
+  color: rgb(26, 23, 23);
+
+  background: rgba(0, 0, 0, 0.15);
+
+  font-size: 0.9rem;
+}
+
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .note-form {
+    padding: 1.5rem;
+  }
+
+  .note-card {
+    flex: 1 1 250px;
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+  .notes-app {
+    padding: 2rem 1rem 0;
+  }
+
+  .notes-wrapper {
+    width: 100%;
+  }
+
+  .heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .note-form {
+    padding: 1.2rem;
+  }
+
+  .notes-container {
+    flex-direction: column;
+  }
+
+  .note-card {
+    width: 100%;
+  }
+
+  .card-buttons button {
+    flex: 1;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
